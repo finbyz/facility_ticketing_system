@@ -44,8 +44,9 @@ app_license = "mit"
 
 # include js in doctype views
 # doctype_js = {"doctype" : "public/js/doctype.js"}
-# doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
-# doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
+doctype_list_js = {
+    "Facility Ticket": "public/js/facility_ticket_list.js"
+}# doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
 
 # Svg Icons
@@ -148,7 +149,13 @@ app_license = "mit"
 
 # Scheduled Tasks
 # ---------------
-
+scheduler_events = {
+    "cron": {
+        "*/10 * * * *": [
+            "facility_ticketing_system.facility_ticketing_system.doctype.facility_ticket.facility_ticket.check_sla_breaches"
+        ]
+    }
+}
 # scheduler_events = {
 # 	"all": [
 # 		"facility_ticketing_system.tasks.all"

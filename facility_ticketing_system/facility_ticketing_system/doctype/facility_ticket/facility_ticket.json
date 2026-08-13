@@ -1,0 +1,342 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2026-08-07 18:22:40.567634",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "status",
+  "column_break_header",
+  "request_type",
+  "request_priority",
+  "customer_section",
+  "customer_name",
+  "column_break_cust",
+  "phone_number",
+  "email_address",
+  "property_section",
+  "property_community",
+  "column_break_prop",
+  "flat_unit_no",
+  "location_details",
+  "request_details_section",
+  "service_category",
+  "column_break_req",
+  "sub_category",
+  "description",
+  "assignment_section",
+  "assigned_person",
+  "column_break_assign",
+  "email_recipient",
+  "assigned_team",
+  "sla_section",
+  "resolution_sla_minutes",
+  "column_break_sla1",
+  "follow_up_sla_minutes",
+  "second_follow_up_sla_minutes",
+  "resolution_due",
+  "column_break_sla2",
+  "follow_up_due",
+  "sla_status",
+  "updates_section",
+  "ticket_updates",
+  "second_follow_up_due",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "default": "TKT-.YYYY.-.#####",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Series",
+   "options": "TKT-.YYYY.-.#####",
+   "reqd": 1
+  },
+  {
+   "default": "Open",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "\nOpen\nIn Progress\nResolved\nClosed\nReopened",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_header",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "request_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Request Type",
+   "options": "\nRequest\nComplaint\nInquiry",
+   "reqd": 1
+  },
+  {
+   "fieldname": "request_priority",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Request Priority",
+   "options": "\nCritical\nHigh\nMedium\nLow",
+   "reqd": 1
+  },
+  {
+   "fieldname": "customer_section",
+   "fieldtype": "Section Break",
+   "label": "Customer Information"
+  },
+  {
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Customer Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_cust",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "phone_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Phone Number",
+   "options": "Phone",
+   "reqd": 1
+  },
+  {
+   "fieldname": "email_address",
+   "fieldtype": "Data",
+   "label": "Email Address",
+   "options": "Email"
+  },
+  {
+   "fieldname": "property_section",
+   "fieldtype": "Section Break",
+   "label": "Property / Location Details"
+  },
+  {
+   "fieldname": "property_community",
+   "fieldtype": "Data",
+   "label": "Property / Community"
+  },
+  {
+   "fieldname": "column_break_prop",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "flat_unit_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Flat / Unit No.",
+   "reqd": 1
+  },
+  {
+   "fieldname": "location_details",
+   "fieldtype": "Small Text",
+   "label": "Location Details"
+  },
+  {
+   "fieldname": "request_details_section",
+   "fieldtype": "Section Break",
+   "label": "Request Details"
+  },
+  {
+   "fieldname": "service_category",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Service Category",
+   "options": "Service Category",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_req",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sub_category",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Sub Category",
+   "options": "Service Sub Category",
+   "reqd": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "label": "Description",
+   "reqd": 1
+  },
+  {
+   "fieldname": "assignment_section",
+   "fieldtype": "Section Break",
+   "label": "Assignment (Auto)"
+  },
+  {
+   "fieldname": "assigned_person",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Assigned Person",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_assign",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "email_recipient",
+   "fieldtype": "Data",
+   "label": "Email Recipient",
+   "options": "Email",
+   "read_only": 1
+  },
+  {
+   "fieldname": "assigned_team",
+   "fieldtype": "Data",
+   "label": "Assigned Team",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sla_section",
+   "fieldtype": "Section Break",
+   "label": "SLA Tracking"
+  },
+  {
+   "fieldname": "resolution_sla_minutes",
+   "fieldtype": "Int",
+   "label": "Resolution SLA (Minutes)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_sla1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "follow_up_sla_minutes",
+   "fieldtype": "Int",
+   "label": "First Follow-Up SLA (Minutes)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "second_follow_up_sla_minutes",
+   "fieldtype": "Int",
+   "label": "Second Follow-Up SLA (Minutes)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "resolution_due",
+   "fieldtype": "Datetime",
+   "label": "Resolution Due",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_sla2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "follow_up_due",
+   "fieldtype": "Datetime",
+   "label": "First Follow-Up Due",
+   "read_only": 1
+  },
+  {
+   "fieldname": "second_follow_up_due",
+   "fieldtype": "Datetime",
+   "label": "Second Follow-Up Due",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sla_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "SLA Status",
+   "options": "\nWithin SLA\nFollow-up Overdue\nSecond Follow-up Overdue\nResolution Overdue\nBreached",
+   "read_only": 1
+  },
+  {
+   "fieldname": "updates_section",
+   "fieldtype": "Section Break",
+   "label": "Ticket Updates / Client Comments"
+  },
+  {
+   "fieldname": "ticket_updates",
+   "fieldtype": "Table",
+   "label": "Ticket Updates",
+   "options": "Ticket Update"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Facility Ticket",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-08-12 10:50:24.037977",
+ "modified_by": "Administrator",
+ "module": "Facility Ticketing System",
+ "name": "Facility Ticket",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [
+  {
+   "color": "Blue",
+   "title": "Open"
+  },
+  {
+   "color": "Orange",
+   "title": "In Progress"
+  },
+  {
+   "color": "Green",
+   "title": "Resolved"
+  },
+  {
+   "color": "Gray",
+   "title": "Closed"
+  },
+  {
+   "color": "Red",
+   "title": "Reopened"
+  }
+ ],
+ "track_changes": 1,
+ "track_seen": 1
+}
