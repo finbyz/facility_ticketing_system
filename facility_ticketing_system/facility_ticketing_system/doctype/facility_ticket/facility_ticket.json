@@ -126,8 +126,9 @@
   },
   {
    "fieldname": "property_community",
-   "fieldtype": "Data",
-   "label": "Property / Community"
+   "fieldtype": "Link",
+   "label": "Property / Community",
+   "options": "Property"
   },
   {
    "fieldname": "column_break_prop",
@@ -291,7 +292,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-08-12 10:50:24.037977",
+ "modified": "2026-09-10 14:05:26.894211",
  "modified_by": "Administrator",
  "module": "Facility Ticketing System",
  "name": "Facility Ticket",
