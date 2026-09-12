@@ -227,8 +227,11 @@ class FacilityTicket(Document):
 			<p>Dear Team,</p>
 			<p>Ticket <b>{{ doc.name }}</b> has been {{ event }}.</p>
 			<table border="1" cellpadding="6" cellspacing="0" style="border-collapse: collapse;">
+				<tr><td><b>Request Type</b></td><td>{{ doc.request_type }}</td></tr>
 				<tr><td><b>Customer</b></td><td>{{ doc.customer_name }}</td></tr>
+				<tr><td><b>Email</b></td><td>{{ doc.email_address }}</td></tr>
 				<tr><td><b>Phone</b></td><td>{{ doc.phone_number }}</td></tr>
+				<tr><td><b>Location</b></td><td>{{ doc.location_details }}</td></tr>
 				<tr><td><b>Building / Unit</b></td><td>{{ doc.building_name }} / {{ doc.flat_unit_no }}</td></tr>
 				<tr><td><b>Category</b></td><td>{{ doc.service_category }} → {{ doc.sub_category }}</td></tr>
 				<tr><td><b>Priority</b></td><td>{{ doc.request_priority }}</td></tr>
